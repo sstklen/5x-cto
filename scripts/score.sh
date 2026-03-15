@@ -4,6 +4,8 @@
 # Usage: bash score.sh /path/to/project
 #
 # LIMITATIONS (read before trusting scores):
+# - This scorer is designed for Bun + TypeScript/JavaScript projects
+# - Python, Go, Rust, etc. will get 0 on import chain and tests (use your own test runner)
 # - This is a heuristic checker, not a security audit or code review
 # - Keyword-based checks can miss real issues and flag false positives
 # - "No src directory" = 0 points, not free points

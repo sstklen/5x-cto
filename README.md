@@ -1,5 +1,3 @@
-[中文版](docs/README.zh.md) · [日本語版](docs/README.ja.md)
-
 # 5x-cto
 
 **Spec-ops for non-coders.** $400/mo outperforms $1,000/mo.
@@ -33,7 +31,9 @@ Claude MAX plan charges Opus tokens at **~10x the rate** of lighter models. When
 | Thinking (specs, review, acceptance) | Opus (~15-20%) | Your Claude MAX |
 | Building (code, debug, tests) | Codex (~80-85%) | Separate Codex budget |
 
-**Result:** Your Claude MAX subscription stretches **5x further** because 80% of the work runs on a separate budget.
+**Result:** Your Claude MAX subscription stretches significantly further because 80% of the work runs on a separate budget.
+
+> **How we estimate "5x":** On Claude MAX $200/mo, Opus gets ~24-40 hours/week vs Sonnet's ~240-480 hours/week (~10x difference in allocation burn rate). With this methodology, Opus handles only ~20% of work (specs + review). 100% / 20% = 5x. This is a theoretical upper bound based on Anthropic's published rate limits, not a controlled experiment. Your actual ratio depends on task complexity and rework cycles. Conservative range: 4-7x.
 
 #### Cost Comparison
 
@@ -155,7 +155,7 @@ A: Correct. You need to know what problem you're solving and who it's for. The m
 A: It's marked "blocked." The system skips it, continues with other cards, and reports the blocker. You decide: re-scope, simplify, or have Opus take over.
 
 **Q: Is 5x really accurate?**
-A: Conservative estimate. Opus handles ~20% of work (specs + review). The rest goes to Codex on a separate budget. Measured range: 5-7x depending on task type.
+A: Theoretical estimate based on Anthropic's published rate limits. Opus handles ~20% of work (specs + review), rest goes to Codex. 100%/20% = 5x. Not independently measured — your results depend on task complexity and rework rate. See methodology section for details.
 
 **Q: Can I use this with other AI tools?**
 A: The methodology is model-agnostic. The skill is written for Claude + Codex, but the principles (requirement -> spec -> card -> build -> review) work with any AI coding tool.

@@ -98,4 +98,15 @@ This project went through two scoring rounds. Showing both for transparency.
 
 ---
 
-*Scored by 5x-cto/scripts/score.sh — Round 1: 84, Round 2: 92*
+*Scored by 5x-cto/scripts/score.sh — Round 1: 84, Round 2: 93*
+
+## Appendix: Raw Score Output
+
+See [ai-academy-score-output.txt](2026-03-16-ai-academy-score-output.txt) for the complete, unedited `score.sh` output.
+
+**How to reproduce:** Clone the washin-academy repo and run:
+```bash
+bash scripts/score.sh /path/to/washin-academy
+```
+
+Note: The source repo is private. This raw output is provided as the closest available audit evidence.

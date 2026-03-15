@@ -203,15 +203,19 @@ Analyze the task, break it into independent cards, write to CARDS.md.
 ### Acceptance Evidence
 - {What output to check: specific command + expected result}
 
-### Required Checks (Mandatory 3 + Custom)
-> The following 3 checks are mandatory for every card. Cannot be skipped.
+### Required Checks (Mandatory 2 + Custom, verified during review)
+> The following 2 checks are mandatory for every card during review. Cannot be skipped.
 - [ ] **Tests**: test command passes (new features must have corresponding test files)
 - [ ] **Error handling**: every route/handler modified in this card has try/catch
-- [ ] **Commit format**: commit message must include `(CARD-XX)`
 - {additional custom checks: typecheck / curl / etc.}
 
+### Commit Rule (verified AFTER review PASS, not during)
+> Commit happens after Opus says PASS. This is enforced in Phase 5, not here.
+- Commit message **must** include `(CARD-XX)` — Opus verifies before committing
+- If commit message is missing Card ID → Opus rejects and re-commits with correct format
+
 ### Done Definition
-All ACCEPTANCE checked + Required Checks all pass = PASS
+All ACCEPTANCE checked + Required Checks pass (review) + Commit with Card ID (Phase 5) = DONE
 ```
 
 ### Report to Product Owner After Cutting
@@ -325,8 +329,9 @@ After Codex reports, Opus performs acceptance review.
 1. **Matches ACCEPTANCE?** — Compare Codex's self-check against actual output line by line
 2. **Regression risk?** — `git diff` for unexpected changes, grep upstream/downstream for impact
 3. **Test gaps?** — Did Required Checks actually run? Are results traceable?
-4. **Mandatory 3 checks?** — Tests written and passing? Error handling covered? Commit has Card ID?
+4. **Mandatory 2 checks?** — Tests written and passing? Error handling covered?
    - Any missing = **FAIL, cannot pass**
+   - Note: Commit format (Card ID) is verified in Phase 5 after PASS, not here (commit hasn't happened yet)
 5. **Anti-fabrication?** — Codex says "PASS" but no command output attached = don't trust it
    - Check the REPORT's "Checks executed" — each must have **actual command + actual output**
    - "Done" or "no issues" without evidence = FAIL
