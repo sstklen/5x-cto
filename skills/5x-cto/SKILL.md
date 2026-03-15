@@ -641,6 +641,37 @@ Found an issue at requirements/spec/implementation layer
 - Don't use free-form reporting
 - Don't `git add .` or stage files not belonging to this card
 
+### Quality Safeguards (Beyond the 3 Mandatory Checks)
+
+These are additional safeguards learned from real-world deployments:
+
+#### Evidence-Based Claims
+- No fabrication, no guessing. Unsure = say so.
+- Every claim needs data: log output, line numbers, curl responses.
+- Banned: "probably", "should be", "I think" without verification.
+- If Codex reports "DONE" but evidence is missing → FAIL.
+
+#### Anti-Hallucination Protocol
+- AI must not blame the user ("please check manually") when it can check itself.
+- AI must not spin in circles: same approach fails 3 times → mandatory strategy change.
+- AI must not provide advice without action: "consider doing X" → give the actual command/code.
+
+#### Deployment Safety
+- No deploy without explicit user authorization.
+- "Let me just push this" or "testing in prod" = violation.
+- Backup before touching config files (.env, docker-compose, etc.).
+- Always prepare a rollback plan before deployment.
+
+#### Database Protection
+- External tools can only SELECT, never write directly to production DB.
+- All writes must go through the application's API layer.
+- Schema changes require migration scripts that can dry-run.
+
+#### Scope Creep Prevention
+- When Codex discovers an unrelated bug during implementation → report it, don't fix it.
+- New issues get new cards. Never "while I'm here" fixes.
+- Same code block modified 3+ times in a session → extract into separate module.
+
 ### Common Commands
 
 ```bash

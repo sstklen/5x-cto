@@ -14,7 +14,7 @@
 
 ### What is this?
 
-A battle-tested development methodology that lets **non-technical founders** build production-grade systems using AI.
+A structured development methodology that lets **non-technical founders** build working systems using AI. Tested on real projects (see [case studies](#case-studies)), not a theoretical framework.
 
 - **Claude Opus** = Your CTO (writes specs, cuts tasks, reviews code)
 - **Codex CLI** = Your engineer (writes code, runs tests, reports back)
@@ -43,23 +43,24 @@ Claude MAX plan charges Opus tokens at **~10x the rate** of lighter models. When
 | 5x Claude MAX (all Sonnet) | $1,000 | 10x more | 4/5 |
 | **1x MAX + 1x Codex (5x-cto)** | **$400** | **>= all-Opus** | **5/5** |
 
-Same quality. 60% cheaper. More capacity.
+Same quality at the Opus-thinking layer. 60% less spend on Claude MAX.
 
-### The Real Selling Point
+### Why this matters for non-coders
 
-> **This skill IS your technical ability.**
+> **This methodology is your technical ability.**
 
-It asks the right questions, breaks work into the right steps, and enforces quality at every gate. You only need to know **what problem you're solving** — the process guarantees the quality.
+It asks the right questions, breaks work into the right steps, and checks quality at every gate. You focus on **what problem you're solving** — the process handles the engineering discipline.
 
-**Proven:** A non-technical founder built these production systems using this methodology:
+**Projects built with this methodology** (by a non-technical founder):
 
-- Production API serving 30+ external service integrations
-- AI-powered analytics platform
-- Multi-language AI chatbot system
-- Full certification & examination platform
+- API system integrating 30+ external services
+- Multi-language AI chatbot
+- Certification & examination platform
 - E-commerce with Stripe payments, PDF certificates, QR verification
 
-All running in production. Not demos — real revenue-generating systems.
+These systems are deployed and running. See [case studies](#case-studies) for scored evidence.
+
+> **Honest disclaimer:** This methodology handles structure, discipline, and quality checks. It does not replace domain expertise, security audits, or production operations knowledge. The scorer is heuristic-based (see limitations in `scripts/score.sh`).
 
 ### How It Works
 
@@ -167,7 +168,7 @@ A: The methodology is model-agnostic. The skill is written for Claude + Codex, b
 
 ### 這是什麼？
 
-一套經過實戰驗證的開發方法論，讓**不會寫程式的人**也能用 AI 做出生產級系統。
+一套有結構的開發方法論，讓**不會寫程式的人**也能用 AI 做出可運行的系統。已在真實專案中測試過（見[案例](#案例)）。
 
 - **Claude Opus** = 你的技術長（寫規格、切任務、驗收程式碼）
 - **Codex CLI** = 你的工程師（寫程式、跑測試、回報進度）
@@ -196,23 +197,24 @@ Claude MAX 方案中，Opus 消耗額度的速度是一般模型的 **~10 倍**�
 | 5 個 Claude MAX（全用 Sonnet） | $1,000 | 多 10 倍 | 4/5 |
 | **1 個 MAX + 1 個 Codex（5x-cto）** | **$400** | **>= 全 Opus** | **5/5** |
 
-一樣的品質。省 60%。容量更大。
+Opus 思考層的品質不變。Claude MAX 花費省 60%。
 
-### 真正的賣點
+### 為什麼非工程師需要這個
 
-> **這個 Skill 本身就是你的技術能力。**
+> **這個方法論就是你的技術能力。**
 
-它幫你問對的問題、拆對的步驟、卡對的品質。你只需要知道**你要解什麼問題** — 流程保證品質。
+它幫你問對的問題、拆對的步驟、卡對的品質。你專注於**你要解什麼問題** — 流程處理工程紀律。
 
-**實戰驗證：** 一個完全沒有程式背景的創業者，用這套方法論建了：
+**用這套方法論建的專案**（由一位沒有技術背景的創業者完成）：
 
-- 整合 30+ 外部服務的生產級 API 系統
-- AI 驅動的分析平台
-- 多語言 AI 聊天機器人系統
-- 完整的認證與考試平台
+- 整合 30+ 外部服務的 API 系統
+- 多語言 AI 聊天機器人
+- 認證與考試平台
 - 含 Stripe 付費、PDF 證書、QR 驗證的電商系統
 
-全部在線上運行。不是 demo — 是真的在賺錢的系統。
+這些系統已部署並運行中。見[案例](#案例)了解有分數的證據。
+
+> **誠實聲明：** 這個方法論處理結構、紀律和品質檢查。它不能取代領域知識、安全稽核或生產維運經驗。評分器是啟發式的（見 `scripts/score.sh` 中的限制說明）。
 
 ### 怎麼運作？
 
@@ -271,7 +273,7 @@ Claude MAX 方案中，Opus 消耗額度的速度是一般模型的 **~10 倍**�
 
 ### これは何？
 
-**技術的な知識がない人**でも、AIを使って本番レベルのシステムを構築できる、実戦で検証された開発方法論です。
+**技術的な知識がない人**でも、AIを使って動作するシステムを構築できる、構造化された開発方法論です。実プロジェクトで検証済み（[ケーススタディ](#ケーススタディ)参照）。
 
 - **Claude Opus** = あなたのCTO（仕様書を書き、タスクを分割し、コードをレビュー）
 - **Codex CLI** = あなたのエンジニア（コードを書き、テストを実行し、結果を報告）
@@ -300,23 +302,24 @@ Claude MAXプランでは、Opusのトークン消費速度は軽量モデルの
 | Claude MAX x5（全てSonnet） | $1,000 | 10倍多い | 4/5 |
 | **MAX x1 + Codex x1（5x-cto）** | **$400** | **全Opus以上** | **5/5** |
 
-同じ品質。60%安い。容量は増加。
+Opus思考レイヤーの品質はそのまま。Claude MAXの支出は60%削減。
 
-### 本当のセールスポイント
+### 非エンジニアに必要な理由
 
-> **このSkill自体が、あなたの技術力です。**
+> **この方法論があなたの技術力になります。**
 
-正しい質問をし、正しいステップに分解し、各ゲートで品質を保証します。あなたが知る必要があるのは**解決したい問題だけ** — プロセスが品質を保証します。
+正しい質問をし、正しいステップに分解し、各ゲートで品質をチェック。あなたは**解決したい問題に集中する**だけ — プロセスがエンジニアリング規律を担保します。
 
-**実績：** 技術的な経験ゼロの創業者が、この方法論で構築したもの：
+**この方法論で構築したプロジェクト**（技術未経験の創業者による）：
 
-- 30以上の外部サービスと連携する本番API
-- AI駆動の分析プラットフォーム
+- 30以上の外部サービスと連携するAPI
 - 多言語AIチャットボット
 - 資格認定・試験プラットフォーム
-- Stripe決済・PDF証明書・QR認証付きECシステム
+- Stripe決済・PDF証明書・QR認証付きEC
 
-全て本番稼働中。デモではなく、実際に収益を生んでいるシステムです。
+これらのシステムは実際にデプロイ・稼働中です。[ケーススタディ](#ケーススタディ)でスコア付きの証拠をご確認ください。
+
+> **正直な免責事項：** この方法論は構造・規律・品質チェックを扱います。ドメイン知識、セキュリティ監査、本番運用の経験を代替するものではありません。スコアラーはヒューリスティックベースです（`scripts/score.sh`内の制限事項を参照）。
 
 ### 仕組み
 
