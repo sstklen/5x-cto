@@ -1,3 +1,5 @@
+[中文版](docs/README.zh.md) · [日本語版](docs/README.ja.md)
+
 # 5x-cto
 
 **Spec-ops for non-coders.** $400/mo outperforms $1,000/mo.
