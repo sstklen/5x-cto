@@ -402,6 +402,11 @@ Open Claude Code and say what you want to build:
 bash scripts/score.sh /path/to/your/project
 ```
 
+## Pair With
+
+- **YES.md** ([`sstklen/yes.md`](https://github.com/sstklen/yes.md)) — AI governance: safety gates, evidence rules, anti-slack detection. 5x-cto handles the pipeline, YES.md keeps AI honest throughout. Recommended for production use.
+- **AI.MD** ([`sstklen/ai-md`](https://github.com/sstklen/ai-md)) — Convert your CLAUDE.md to AI-native format so rules actually get followed.
+
 ## License
 
 MIT
