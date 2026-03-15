@@ -135,7 +135,7 @@ Real projects, real scores, built by a non-technical founder:
 
 | Date | Project | Cards | Score | Highlights |
 |------|---------|-------|-------|------------|
-| 2026-03-16 | [AI Academy](case-studies/2026-03-16-ai-academy.md) | 9/9 ✅ | 87/100 | Stripe + PDF certs + i18n |
+| 2026-03-16 | [AI Academy](case-studies/2026-03-16-ai-academy.md) | 9/9 ✅ | 92/100 | Stripe + PDF certs + i18n + 10 tests |
 | 2026-03-16 | [Boss Dashboard](case-studies/2026-03-16-boss-dashboard.md) | 4/4 ✅ | 85/100 | Real-time status + 3-lang UI |
 
 ## FAQ
