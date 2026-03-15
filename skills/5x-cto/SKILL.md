@@ -203,8 +203,12 @@ Analyze the task, break it into independent cards, write to CARDS.md.
 ### Acceptance Evidence
 - {What output to check: specific command + expected result}
 
-### Required Checks
-- {test command / typecheck / curl ... / etc.}
+### Required Checks (Mandatory 3 + Custom)
+> The following 3 checks are mandatory for every card. Cannot be skipped.
+- [ ] **Tests**: test command passes (new features must have corresponding test files)
+- [ ] **Error handling**: every route/handler modified in this card has try/catch
+- [ ] **Commit format**: commit message must include `(CARD-XX)`
+- {additional custom checks: typecheck / curl / etc.}
 
 ### Done Definition
 All ACCEPTANCE checked + Required Checks all pass = PASS
