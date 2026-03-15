@@ -320,11 +320,24 @@ Your task is {Card ID}: {Title}
 
 After Codex reports, Opus performs acceptance review.
 
-### Three Review Tasks (Only These Three, No More No Less)
+### Seven Review Tasks (All required. Missing any = incomplete review)
 
 1. **Matches ACCEPTANCE?** — Compare Codex's self-check against actual output line by line
 2. **Regression risk?** — `git diff` for unexpected changes, grep upstream/downstream for impact
 3. **Test gaps?** — Did Required Checks actually run? Are results traceable?
+4. **Mandatory 3 checks?** — Tests written and passing? Error handling covered? Commit has Card ID?
+   - Any missing = **FAIL, cannot pass**
+5. **Anti-fabrication?** — Codex says "PASS" but no command output attached = don't trust it
+   - Check the REPORT's "Checks executed" — each must have **actual command + actual output**
+   - "Done" or "no issues" without evidence = FAIL
+   - Opus picks at least 1 Evidence item and re-runs it independently
+6. **Anti-blame?** — Did Codex push work back to the user that it could do itself?
+   - "Please check manually" = FAIL (if checkable, check it yourself)
+   - "Please verify environment" = check first, attach results, then ask
+   - "Probably a permissions issue" = run the verification command first, don't guess
+7. **Anti-scope-creep?** — Did Codex fix things outside this card's scope?
+   - "Also fixed a bug I noticed" = scope violation, that fix gets a new card
+   - `git diff` must show only files listed in Scope
 
 ### Independent Verification (Don't Just Trust Codex's Self-Report)
 
@@ -333,11 +346,17 @@ After Codex reports, Opus performs acceptance review.
 git diff --stat
 git diff
 
-# 2. Run Required Checks yourself
+# 2. Run Required Checks yourself (don't trust self-report)
 {Execute Required Checks one by one}
 
-# 3. Confirm scope wasn't exceeded
+# 3. Pick at least 1 Evidence item from Codex's REPORT and re-run it
+{Codex claimed check X passed → Opus runs the same command to confirm}
+
+# 4. Confirm scope wasn't exceeded
 # Are all changed files within Scope?
+
+# 5. Check for blame-shifting language
+# Scan REPORT for "please check", "please verify", "probably"
 ```
 
 ### Review Output Format (Fixed)
@@ -350,6 +369,13 @@ git diff
 
 ### Risks
 - {Regression risks or test gaps, or "None"}
+
+### Anti-Fabrication Check
+- Opus re-ran: {which Evidence item} → {actual result}
+- Codex self-report vs actual: {consistent / inconsistent — inconsistent = FAIL}
+
+### Anti-Blame Check
+- Blame-shifting language found: {None / list — any found = FAIL}
 
 ### Required Fixes (Only when FAIL)
 - {fix 1 — must trace back to an ACCEPTANCE item}
